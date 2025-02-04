@@ -1,5 +1,3 @@
-<!-- Curesito-->
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -34,13 +32,26 @@
             justify-items: center;
         }
 
-        input[type="number"] {
+        input[type="number"], .resultado {
             width: 100px;
+            height: 100px;
             padding: 15px;
             font-size: 2rem;
             text-align: center;
             border: none;
             border-radius: 8px;
+            background-color: #222;
+            color: #fff;
+        }
+
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield; /* Firefox */
         }
 
         button {
@@ -59,9 +70,10 @@
         }
 
         .resultado {
-            font-size: 3rem;
-            margin-top: 20px;
-            color: #fff; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -69,10 +81,10 @@
     <div class="container">
         <h1>Regla de Tres</h1>
         <div class="grid">
-            <input type="number" id="a" placeholder="nº1">  
-            <input type="number" id="b" placeholder="nº2">  
-            <input type="number" id="c" placeholder="nº3">  
-            <div id="resultado">?</div>                     
+            <input type="number" id="a" placeholder="nº1">   
+            <input type="number" id="b" placeholder="nº2">   
+            <input type="number" id="c" placeholder="nº3">   
+            <div class="resultado" id="resultado">?</div>     
         </div>
         <button onclick="calcular()">Calcular</button>
     </div>
@@ -96,4 +108,5 @@
         }
     </script>
 </body>
+    <foot> Curesito </foot>
 </html>
